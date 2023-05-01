@@ -9,7 +9,7 @@ import ErrorPage from './assets/routes/ErrorPage.jsx'
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: '/rest-countries',
     element: <App />,
     errorElement: <ErrorPage />,
     children: [
