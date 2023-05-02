@@ -11,7 +11,7 @@ export default function CountriesDetails() {
     }
 
     if (!country) return (
-        <Navigate to="/" />
+        <Navigate to="/rest-countries" />
     )
 
     return (
@@ -21,13 +21,13 @@ export default function CountriesDetails() {
                     <BsArrowLeftShort className="w-5 h-5" />
                     Back</button>
 
-                <div className="w-full grid grid-cols-1 md:grid-cols-2 items-center gap-10 lg:gap-20">
+                <div className="w-fit grid grid-cols-1 md:grid-cols-2 items-center gap-10 lg:gap-20">
                     <div className="w-full h-[240px] md:h-[260px] xl:h-[350px] overflow-hidden">
                         <img src={country.flags.png} alt="Image Country" className="w-full h-full object-cover" />
                     </div>
                     <div className="w-full">
                         <h1 className="text-2xl font-bold text-very-dark-blue-text dark:text-white mb-8">{country.name}</h1>
-                        <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-4 lg:gap-6">
+                        <div className="w-fit grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-4 lg:gap-6">
                             <div className="flex flex-col items-start gap-2">
                                 <span className="font-semibold text-very-dark-blue-text dark:text-white text-start text-sm">Native Name: <span className="font-light">{country.nativeName}</span></span>
                                 <span className="font-semibold text-very-dark-blue-text dark:text-white text-start text-sm">Population: <span className="font-light">{country.population}</span></span>
