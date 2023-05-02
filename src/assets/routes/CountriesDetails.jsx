@@ -7,7 +7,7 @@ export default function CountriesDetails() {
 
 
     const handleVoltar = () => {
-        navigate("/")
+        navigate("/rest-countries")
     }
 
     if (!country) return (

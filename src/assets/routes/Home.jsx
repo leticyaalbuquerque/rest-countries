@@ -12,7 +12,7 @@ export default function Home() {
     const navigate = useNavigate()
 
     const handleDetails = (country) => {
-        navigate("/countries-details", { state: country })
+        navigate("/rest-countries/countries-details", { state: country })
     }
 
     const handleValueChange = (e) => {
@@ -40,7 +40,7 @@ export default function Home() {
                     <DropdownFilter onChange={handleValueChange} />
                 </div>
 
-                <div className="w-full grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8 lg:gap-6 xl:gap-16">
+                <div className="w-fit grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8 lg:gap-6 xl:gap-16">
                     {filteredCards.map((country) => (
                         <div onClick={() => handleDetails(country)} key={country.name}>
                             <CardCountry
